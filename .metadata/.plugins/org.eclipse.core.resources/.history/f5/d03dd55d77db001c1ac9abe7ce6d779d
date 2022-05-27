@@ -1,0 +1,16 @@
+package one.digitalinovation.gof.service;
+
+import javax.websocket.server.PathParam;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import one.digitalinovation.gof.model.Endereco;
+
+@FeignClient(name = "viacep", url = "https://viacep.com.br/ws")
+public interface ViaCepService {
+
+	@RequestMapping()
+	
+	Endereco consultarCep(@PathVariable("cep") String cep)
+}

@@ -1,0 +1,17 @@
+package one.digitalinovation.gof.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import one.digitalinovation.gof.service.ClienteService;
+
+@RestController
+@RequestMapping("clientes")
+public class ClienteRestController {
+	
+	@Autowired
+	private ClienteService clinteService;
+	
+
+}

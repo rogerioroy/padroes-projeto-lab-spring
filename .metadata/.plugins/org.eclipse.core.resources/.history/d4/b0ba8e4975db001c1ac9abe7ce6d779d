@@ -1,0 +1,7 @@
+package one.digitalinovation.gof.service.impl;
+
+import one.digitalinovation.gof.service.ClienteService;
+
+public class ClienteServiceImpl implements ClienteService{
+
+}
