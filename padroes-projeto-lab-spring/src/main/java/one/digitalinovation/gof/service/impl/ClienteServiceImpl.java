@@ -50,6 +50,7 @@ public class ClienteServiceImpl implements ClienteService{
 		String cep = cliente.getEndereco().getCep();
 		Endereco endereco = enderecoRepository.findById(cep).orElseGet(() -> {
 			Endereco novoEndereco = viaCepService.consultarCep(cep);
+			novoEndereco.setNumero(cliente.getEndereco().getNumero());
 			enderecoRepository.save(novoEndereco);
 			return novoEndereco;
 		});
